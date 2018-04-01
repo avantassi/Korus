@@ -19,10 +19,6 @@ ul li{
   list-style: none;
 }
 
-section{
-  overflow: hidden;
-}
-
 .wrapper{
   width: 100%;
   min-height: 100%;
@@ -31,6 +27,12 @@ section{
 .container{
   max-width: 940px;
   margin: 0 auto;
+}
+
+.third-title{
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
 }
 
 .timeline__steps {
@@ -94,4 +96,68 @@ section{
   height: 2px;
   background: #dfdfdf;
   margin: 5px 5px 0;
+}
+
+//
+
+.diagram__item {
+  float: left;
+  width: 49%;
+  padding: 0 30px 40px 0;
+  position: relative;
+  cursor: pointer;
+  margin: 1px 1px;
+
+  &:nth-child(n+3){
+    padding-top: 50px;
+  }
+
+  &:nth-child(even){
+    padding-left: 50px;
+  }
+}
+
+.link{
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  transition: all .3s;
+}
+
+.link--first{
+  background-color: green;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 100%;
+}
+
+.link--second{
+  background-color: red;
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: 100%;
+}
+
+.link--third{
+  background-color: green;
+  top: 0;
+  right: 0;
+  border-bottom-left-radius: 100%;
+}
+
+.link--fourth{
+  background-color: orange;
+  top: 0;
+  left: 0;
+  border-bottom-right-radius: 100%;
+}
+
+.link:hover{
+  width: 60px;
+  height: 60px;
+}
+
+.description__text{
+  font-size: 12px;
 }
